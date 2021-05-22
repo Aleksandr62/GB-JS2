@@ -1,0 +1,130 @@
+.registration {
+  padding-top: 44px;
+  padding-bottom: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.registration__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.registration__gender__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: black;
+}
+
+.registration__gender {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.registration__gender__input {
+  margin-right: 10px;
+}
+
+.registration__p {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 360px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+}
+
+.registration__input {
+  margin-top: 20px;
+  width: 360px;
+  outline: none;
+  border: 1px solid #A4A4A4;
+  padding: 16px 14px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #222222;
+}
+
+.registration__input::-webkit-input-placeholder {
+  color: #B1B1B1;
+}
+
+.registration__help {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 360px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.registration__submit {
+  margin-top: 38px;
+  -ms-flex-item-align: self-start;
+      -ms-grid-row-align: self-start;
+      align-self: self-start;
+  padding: 16px 28px;
+  font-size: 14px;
+  line-height: 17px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  background: #F16D7F;
+  border: 1px solid #F16D7F;
+}
+
+.registration__submit:hover {
+  background: #ff7e90;
+}
+
+.registration__info {
+  margin-left: 128px;
+  margin-top: 20px;
+  max-width: 652px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.registration__list {
+  list-style: none;
+  margin-top: 22px;
+}
+
+.registration__list__item {
+  margin-top: 16px;
+}
+
+.registration__list__item::before {
+  margin-right: 22px;
+  content: url("../img/check.svg");
+}
+/*# sourceMappingURL=registration.css.map */

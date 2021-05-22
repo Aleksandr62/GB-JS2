@@ -1,0 +1,374 @@
+@import url(promo.css)
+@import url(footer.css)
+@import url(registration.css)
+@import url(advantages.css)
+@import url(cart.css)
+@import url(filter.css)
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-size: 16px
+a
+    text-decoration: none
+    color: inherit
+
+.container
+    font-family: Lato
+    max-width: 1600px
+    margin: 0 auto
+
+.center
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+.italic
+    font-style: italic
+
+.button
+    padding: 14px 38px
+    font-size: 16px
+    line-height: 19px
+    cursor: pointer
+
+.header
+    padding-top: 1rem
+    padding-bottom: 1rem
+    background: #222222
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    &__left
+        display: flex
+        align-items: center
+    &__center
+        flex-grow: 1
+    &__right
+        display: flex
+        align-items: center
+        &__link
+            margin-left: 33px
+            cursor: pointer
+    &_logo
+        margin-right: 41px
+        cursor: pointer
+
+.search-form
+    display: flex
+    align-items: center
+
+.search
+    &__fld
+        background: transparent
+        border: none
+        outline: none
+        &:focus
+            background: white
+    &__vsbl
+        padding: 0.5rem 1rem
+        width: fit-content
+        border-bottom: 1px solid white
+        transition: 1s ease-out
+        &:focus
+            background: white
+            transition: background 0.4s ease
+    &__hide
+        padding: 0.5rem 0
+        width: 0
+        border: none
+        transition: 0.7s ease-in-out
+    &__form
+        margin-left: 2.5rem
+        display: flex
+        align-items: center
+    &__btn
+        background: transparent
+        border: none
+        outline: none
+    &__img:hover
+        fill: red
+
+.menu-box
+    cursor: pointer
+.back-filter
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba(34, 34, 34, 70%)
+    filter: opacity(0.8)
+    z-index: 100
+.menu
+    padding: 2rem
+    display: flex
+    flex-direction: column
+    background: white
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    position: absolute
+    top: 100%
+    right: 0
+    z-index: 101
+    &__header
+        font-weight: bold
+    &__item
+        margin-top: 12px
+        list-style: none
+        &__group
+            color: #F16D7F
+            cursor: pointer
+            &:hover
+                background: #EBEBEB
+        &__link
+            margin-top: 12px
+            margin-left: 1.5rem
+            color: #6F6E6E
+            cursor: pointer
+            &:hover
+                color: #F16D7F
+.close
+    top: 1rem
+    right: 1rem
+    height: 1rem
+    width: 1rem
+    position: absolute
+    cursor: pointer
+    &::after
+        background: #6f6e6e
+        content: ''
+        position: absolute
+        height: 1rem
+        width: 1px
+        left: 0.5rem
+        transform: rotate(45deg)
+    &::before
+        background: #6f6e6e
+        content: ''
+        position: absolute
+        height: 1rem
+        width: 1px
+        left: 0.5rem
+        transform: rotate(-45deg)
+
+.catalog
+    margin-left: -15px
+    margin-right: -15px
+    padding-top: 48px
+    padding-bottom: 48px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &__header
+        font-weight: normal
+        text-align: center
+        &__p
+            font-size: 14px
+            line-height: 17px
+        &__h
+            font-size: 30px
+            line-height: 36px
+    &__bottom
+        display: flex
+        justify-content: center
+    &__btn
+        margin-bottom: 48px
+        padding: 14px 38px
+        font-size: 16px
+        line-height: 19px
+        cursor: pointer
+        border: 1px solid #FF6A6A
+        color: #F26376
+        &:hover
+            color: #FFFFFF
+            background: #F16D7F
+
+.card
+    width: 360px
+    margin: 15px 15px
+    background: #F8F8F8
+    padding-bottom: 20px
+    &__img
+        position: relative
+        cursor: pointer
+        &:hover > .card__select
+            transform: scaleX(1)
+            transition: 0.5s
+    &__heading
+        display: flex
+        margin-top: 24px
+        margin-left: 18px
+        font-size: 13px
+        line-height: 16px
+        cursor: pointer
+    &__descr
+        margin-top: 12px
+        margin-left: 16px
+        margin-right: 28px
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+    &__price
+        margin-top: 18px
+        margin-left: 18px
+        font-size: 16px
+        line-height: 19px
+        color: #F16D7F
+    &__select
+        background: rgba(58, 56, 56, 0.86)
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        transform: scaleX(0)
+        align-items: center
+        justify-content: center
+        &__link
+            padding: 10px 18px
+            font-size: 14px
+            line-height: 17px
+            border: 1px solid #FFFFFF
+            color: #FFFFFF
+            display: flex
+            align-items: center
+            &:hover
+                box-shadow: 0 0 5px white
+        &__img
+            width: 26px
+            height: 24px
+            margin-right: 10px
+
+.paginator
+    padding: 12px 16px
+    border: 1px solid #EBEBEB
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+    color: #EBEBEB
+    &__link:hover
+        font-weight: 700
+        color: black
+
+.catalog-top
+    min-height: 148px
+    background: #F8F3F4
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    &__header
+        flex-grow: 1
+    &__article
+        font-size: 24px
+        line-height: 29px
+    &__breadcrumbs
+        display: flex
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #636363
+        text-transform: uppercase
+        cursor: pointer
+    &__link:hover
+        color: #F16D7F
+.product
+    &__photo
+        display: flex
+        justify-content: center
+        position: relative
+        height: 778px
+        border: 1px solid #EAEAEA
+        overflow: hidden
+        z-index: 0
+    &__img
+        height: 100%
+    &__next, &__prev
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 47px
+        width: 47px
+        top: calc(50% - 23px)
+        background: rgba(42, 42, 42, 0.15)
+        position: absolute
+    &__prev
+        left: 0
+        &:hover > svg > path
+            fill: #ff7e90
+    &__next
+        right: 0
+        &:hover > svg > path
+            fill: #ff7e90
+    &__shift
+        margin-top: -64px
+        display: flex
+    &__info
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 64px 250px
+        background: #FFFFFF
+        border: 1px solid #EAEAEA
+        z-index: 1
+    &__heading
+        padding-top: 12px
+        padding-bottom: 48px
+        font-weight: 300
+        font-size: 18px
+        line-height: 22px
+        color: #4D4D4D
+    &__p
+        padding-bottom: 12px
+        padding-left: 42px
+        padding-right: 42px
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+        color: #5E5E5E
+    &__price
+        padding-top: 32px
+        padding-bottom: 65px
+        border-bottom: 1px solid #EAEAEA
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+        color: #ff7e90
+
+.select
+    color: #F16D7F
+.line
+    width: 64px
+    border-bottom: 3px solid #ff7e90
+.parameters
+    padding-top: 64px
+    padding-bottom: 48px
+    font-size: 14px
+    line-height: 17px
+    font-weight: 600
+    color: #6F6E6E
+    display: flex
+.add-cart
+    padding-right: 50px
+    padding-left: 24px
+    border: 1px solid #FF6A6A
+    color: #F26376
+    display: flex
+    align-items: center
+    &:hover
+        color: white
+        background: #F16D7F
+        & .add-cart__img > path
+            fill: white
+    &__img
+        display: flex
+        margin-right: 22px
+        & > path
+            fill: #F16D7F
+.button
+    padding: 14px 38px
+    font-size: 16px
+    line-height: 19px
+    cursor: pointer

@@ -1,0 +1,79 @@
+.footer
+    &__top
+        background: rgba(244, 244, 244, 0.7) url(/img/photo_footer.png) no-repeat
+        background-size: cover
+        background-position-x: 25%
+        display: flex
+        justify-content: space-between
+        &__img
+            margin-bottom: 30px
+            width: 96px
+        &__left
+            padding-top: 98px
+            width: 360px
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            text-align: center
+            &__p
+                font-size: 20px
+                line-height: 24px
+        &__right
+            padding-top: 98px
+            max-width: 558px
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            text-align: center
+            &__h
+                font-weight: bold
+                font-size: 24px
+                line-height: 38px
+            &__p
+                margin-bottom: 30px
+                line-height: 30px
+    &__form
+        margin-bottom: 110px
+    &__bottom
+        padding-top: 24px
+        padding-bottom: 24px
+        padding-left: 32px
+        padding-right: 32px
+        background: #222222
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: #FBFBFB
+
+.social-links
+    margin-left: 2px
+    &:hover path:nth-of-type(1)
+        fill: #F16D7F
+    &:hover g>path:nth-of-type(2)
+        fill: white
+    &:hover path:nth-of-type(2)
+        fill: white
+
+.email
+    &__input
+        padding: 18px 40px 18px 20px
+        width: 242px
+        font-size: 14px
+        line-height: 17px
+        border: none
+        outline: none
+        background: #E1E1E1
+        border-radius: 24px 0 0 24px
+    &__btn
+        padding: 18px 20px
+        margin-left: -4px
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+        background: #F16D7F
+        border-radius: 0 24px 24px 0
+        &:hover
+            background: #D05C6E
+            cursor: pointer
