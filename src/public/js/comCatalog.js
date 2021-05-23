@@ -1,3 +1,5 @@
+import eventBus from './eventBus' // шина событий
+
 const productCard = {
   props: ['product'],
   data() {
@@ -47,6 +49,9 @@ const comCatalog = {
           this.filtered.push(Object.assign({img: `img/card-${el.id}.png`}, el));
         }
       });
+      eventBus.$on('filter-main', ( searchTxt) => {
+        this.filter(searchTxt);
+      });      
   },
   template: `
   <div class="catalog center" ref="comCatalog">
