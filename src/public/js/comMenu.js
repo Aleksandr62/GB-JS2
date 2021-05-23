@@ -1,12 +1,20 @@
+import eventBus from './eventBus' // шина событий
+
 const menuItem = {
     props: ['item'],
-    data(){
+    data() {
         return {
         }
     },
+    methods: {
+        menuClickHandler(group, el) {
+            eventBus.$emit('breadcrumbs-item', group, el);
+            this.$root.change('catalog', group, el);
+        },
+    },
     template: `
     <ul class="menu__item"><p class="menu__item__group" @click="$emit('menu-select', group)">{{item.group}}</p>
-        <li class="menu__item__link" v-for="el of item.items" :key="el" :group="item.group" :item="item" @click="$root.change('catalog', item.group, el)">{{el}}</li>
+        <li class="menu__item__link" v-for="el of item.items" :key="el" :group="item.group" :item="item" @click="menuClickHandler(item.group, el)">{{el}}</li>
     </ul>  
     `
 };
@@ -17,12 +25,18 @@ const comMenu = {
             productsList: [],
             filtered: [],
             menuList: [
-                {group: 'Man', 
-                items: ['Accessories', 'Bags', 'Denim', 'T-Shirts',]},
-                {group: 'Woman', 
-                items: ['Accessories', 'Jackets & Coats', 'Polos', 'T-Shirts', 'Shirts',]},
-                {group: 'Kids', 
-                items: ['Accessories', 'Jackets & Coats', 'Polos', 'T-Shirts', 'Shirts', 'Bags',]},
+                {
+                    group: 'Man',
+                    items: ['Accessories', 'Bags', 'Denim', 'T-Shirts',]
+                },
+                {
+                    group: 'Woman',
+                    items: ['Accessories', 'Jackets & Coats', 'Polos', 'T-Shirts', 'Shirts',]
+                },
+                {
+                    group: 'Kids',
+                    items: ['Accessories', 'Jackets & Coats', 'Polos', 'T-Shirts', 'Shirts', 'Bags',]
+                },
             ],
             isVisible: false,
         };
