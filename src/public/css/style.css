@@ -439,6 +439,10 @@ a {
   cursor: pointer;
 }
 
+.catalog-top__breadcrumbs:last-child > span {
+  display: none;
+}
+
 .catalog-top__link:hover {
   color: #F16D7F;
 }
