@@ -1,0 +1,164 @@
+.cart-box
+    padding-top: 96px
+    padding-bottom: 128px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    background: white
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    &[mini]
+        padding-top: 1rem
+        padding-bottom: 1rem
+        padding-left: 1rem
+        padding-right: 1rem
+        position: absolute
+        top: 100%
+        right: 0
+        z-index: 101
+    &__products
+    &__cart
+        margin-bottom: 40px
+        max-width: 652px
+        height: 306px
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        position: relative
+        cursor: pointer
+        filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13))
+        border: 1px solid transparent
+        &:hover
+            border: 1px solid #F16D7F
+        &[mini]
+            margin-bottom: 6px
+            width: fit-content
+            height: 140px
+            display: flex
+            justify-content: flex-start
+            flex-wrap: wrap
+            position: relative
+            filter: none
+            border: 1px solid transparent
+            &:hover
+                border: 1px solid #F16D7F
+        &__info
+            padding: 22px 97px 22px 32px
+            display: flex
+            flex-direction: column
+            flex: 1
+            background: white
+            &[mini]
+                padding: 8px
+        &__h
+            margin-bottom: 42px
+            font-size: 24px
+            line-height: 29px
+            &[mini]
+                margin-bottom: 8px
+                font-size: 16px
+                line-height: 18px
+    &__img
+        height: 100%
+    &__buttons
+        display: flex
+        justify-content: space-between
+        &[mini]
+            flex-direction: column
+    &__button
+        margin-top: 32px
+        padding: 16px 40px
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        outline: none
+        background: none
+        border: 1px solid #A4A4A4
+        cursor: pointer
+        &[mini]
+            margin-top: 6px
+            padding: 8px 10px
+            line-height: 14px
+.order
+    &__summary__p
+        margin-bottom: 12px
+        text-align: right
+        font-size: 11px
+        line-height: 13px
+        color: #F16D7F
+        &[mini]
+            margin-bottom: 8px
+    &__accept
+        padding-left: 128px
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        &__quote
+            margin-top: 4px
+            align-self: self-start
+            padding: 10px 14px
+            outline: none
+            background: none
+            border: 1px solid #A4A4A4
+            cursor: pointer
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            color: #4A4A4A
+    &__adress
+        margin-bottom: 20px
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        &__input
+            margin-bottom: 20px
+            width: 360px
+            outline: none
+            border: 1px solid #A4A4A4
+            padding: 16px 14px
+            font-weight: 300
+            font-size: 13px
+            line-height: 16px
+            color: #B1B1B1
+    &__summary
+        margin-top: 58px
+        padding: 40px 44px
+        width: 360px
+        display: flex
+        flex-direction: column
+        background: #F5F3F3
+        &__p
+            margin-bottom: 12px
+            text-align: right
+            font-size: 11px
+            line-height: 13px
+            color: #4A4A4A
+        &__h
+            padding-bottom: 20px
+            text-align: right
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            border-bottom: 1px solid #E2E2E2
+            color: #222222
+    &__button
+        margin-top: 32px
+        padding: 16px 40px
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        outline: none
+        background: none
+        border: 1px solid #A4A4A4
+        cursor: pointer
+        &:hover
+            background: #ff7e90
+.ml-summary
+    margin-left: 26px
+.select
+    color: #F16D7F
+.submit
+    color: white
+    font-size: 16px
+    line-height: 19px
+    background: #F16D7F
+    border: 1px solid #F16D7F

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<!--         <link rel="stylesheet" href="./css/style.css"> -->
+    <title>Интернет магазин</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <header class="header center">
+                <div class="header__left">
+                    <div class="logo header_logo"><img src="/img/logo.svg" alt="logo" @click="change('main')"></div>
+                    <com-filter ref="comFilter"></com-filter>
+                </div>
+                <div class="header__center"></div>
+                <div class="header__right">
+                    <com-menu ref="comMenu"></com-menu>
+                    <div class="header__right__link mobile_none"><img src="/img/account.svg" alt="account"
+                            @click="change('registration')"></div>
+                    <com-cart ref="comCart"></com-cart>
+                </div>
+            </header>
+            <com-breadcrumbs ref="comBreadcrumbs" v-if="!isMainPage"></com-breadcrumbs>
+            <section class="content">
+                <section v-if="isMainPage">
+                    <com-promo ref="comPromo"></com-promo>
+                    <com-sale class="center" ref="comSale"></com-sale>
+                    <article class="catalog__header ">
+                        <h1 class="catalog__header__h ">Fetured Items</h1>
+                        <p class="catalog__header__p ">Shop for items based on what we featured in this week</p>
+                    </article>
+                </section>
+                <com-filter-cat v-if="!isMainPage && currentComp === 'catalog'"></com-filter-cat>
+                <component :is="currentComponent.comp" :ref="currentComponent.name"></component>
+                <div class="catalog__bottom" v-if="isMainPage">
+                    <div class="button catalog__btn" @click="$root.change('catalog')">Browse All Product</div>
+                </div>
+            </section>
+            <com-advantages ref="comAdvantages" v-if="currentComponent.comp !== 'com-product'"></com-advantages>
+            <com-footer ref="comFooter"></com-footer>
+        </div>
+    </div>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+
+</html>

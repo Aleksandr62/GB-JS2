@@ -1,0 +1,78 @@
+.registration
+    padding-top: 44px
+    padding-bottom: 96px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &__data
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+    &__gender__box
+        display: flex
+        margin-top: 20px
+        font-weight: 300
+        font-size: 11px
+        line-height: 13px
+        color: black
+    &__gender
+        margin-right: 20px
+        display: flex
+        &__input
+            margin-right: 10px
+    &__p
+        margin-top: 20px
+        display: flex
+        width: 360px
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: #222222
+    &__input
+        margin-top: 20px
+        width: 360px
+        outline: none
+        border: 1px solid #A4A4A4
+        padding: 16px 14px
+        font-weight: 300
+        font-size: 13px
+        line-height: 16px
+        color: #222222
+        &::-webkit-input-placeholder
+            color: #B1B1B1
+    &__help
+        margin-top: 16px
+        display: flex
+        width: 360px
+        font-weight: 300
+        font-size: 13px
+        line-height: 16px
+        color: #B1B1B1
+    &__submit
+        margin-top: 38px
+        align-self: self-start
+        padding: 16px 28px
+        font-size: 14px
+        line-height: 17px
+        outline: none
+        cursor: pointer
+        color: white
+        background: #F16D7F
+        border: 1px solid #F16D7F
+        &:hover
+            background: #F16D7F + #111111
+    &__info
+        margin-left: 128px
+        margin-top: 20px
+        max-width: 652px
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+    &__list
+        list-style: none
+        margin-top: 22px
+        &__item
+            margin-top: 16px
+            &::before
+                margin-right: 22px
+                content: url("../img/check.svg")
